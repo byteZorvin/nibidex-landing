@@ -1,95 +1,99 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import React, { useEffect } from 'react';
+import { Grid, Typography } from '@mui/material';
+import Image from 'next/image';
+
+import ComposableIcon from '@/assets/composable.png';
+import PermissionLessIcon from '@/assets/permissionless.png';
+import CheapIcon from '@/assets/cheap.png';
+import FastIcon from '@/assets/fast.png';
+import HeroSection from '@/components/hero';
+import BottomToTop from '@/components/animation/bottomToTop';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (window && window?.location.hostname.split('.')[0] === 'app') {
+      router.push('/trade');
+    }
+  }, [router]);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <Grid
+      sx={{
+        p: { xs: '0px 10px', md: '0px 15%' }
+      }}
+      mt={{ xs: '40%', sm: '30%', md: '14%' }}
+    >
+      <HeroSection />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      <BottomToTop
+        delay={450}
+        sx={{
+          width: '100%',
+          my: '100px'
+        }}
+      >
+        <Typography
+          sx={{
+            textAlign: 'center',
+            fontSize: { xs: '36px', md: '48px' },
+            fontWeight: '600',
+            mb: '24px'
+          }}
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          Why NibiDEX?
+        </Typography>
+        <Grid container justifyContent={'space-between'} rowSpacing={4}>
+          <Grid item xs={6} md={3} textAlign={'center'}>
+            <Image src={ComposableIcon} alt='composable icon' />
+            <Typography
+              textAlign='center'
+              color='gray'
+              fontWeight={'600'}
+              mt='12px'
+            >
+              Composable
+            </Typography>
+          </Grid>
+          <Grid item xs={6} md={3} textAlign={'center'}>
+            <Image src={PermissionLessIcon} alt='permissionless icon' />
+            <Typography
+              textAlign='center'
+              color='gray'
+              fontWeight={'600'}
+              mt='12px'
+            >
+              Permissionless
+            </Typography>
+          </Grid>
+          <Grid item xs={6} md={3} textAlign={'center'}>
+            <Image src={CheapIcon} alt='cheap icon' />
+            <Typography
+              textAlign='center'
+              color='gray'
+              fontWeight={'600'}
+              mt='12px'
+            >
+              Cheap
+            </Typography>
+          </Grid>
+          <Grid item xs={6} md={3} textAlign={'center'}>
+            <Image src={FastIcon} alt='fast icon' />
+            <Typography
+              textAlign='center'
+              color='gray'
+              fontWeight={'600'}
+              mt='12px'
+            >
+              Fast
+            </Typography>
+          </Grid>
+        </Grid>
+      </BottomToTop>
+    </Grid>
   );
 }
