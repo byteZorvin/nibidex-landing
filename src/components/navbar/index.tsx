@@ -73,19 +73,18 @@ function Navbar() {
             onClick={() => router.push('/')}
           >
             <Image src={NibiLogo} alt='logo of NibiDEX' style={logoStyle} />
-            {/* <Typography
+            <Typography
               sx={theme => ({
                 background: `linear-gradient(to right, ${theme.palette.primary[400]}, ${theme.palette.primary[600]})`,
                 color: 'transparent',
                 backgroundClip: 'text',
                 fontWeight: '600',
                 fontSize: '22px',
-                ml: '10px',
-                display: { md: 'none' }
+                ml: '10px'
               })}
             >
               NibiDEX
-            </Typography> */}
+            </Typography>
           </Box>
 
           <Box
