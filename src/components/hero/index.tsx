@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import Image from 'next/image';
 
 import WheatIcon from '@/assets/wheat-icon.svg';
 
 import BottomToTop from '../animation/bottomToTop';
+import { comingSoonDialogContext } from '../providers';
 
 const HeroSection = () => {
+  const { setComingSoonDialogOpen } = useContext(comingSoonDialogContext);
+
   return (
     <Stack direction={'column'} alignItems={'center'} spacing={5}>
       <BottomToTop>
@@ -43,6 +46,7 @@ const HeroSection = () => {
             fontWeight: '600',
             fontSize: '16px'
           }}
+          onClick={() => setComingSoonDialogOpen(true)}
         >
           Launch App
         </Button>

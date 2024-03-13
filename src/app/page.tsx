@@ -11,6 +11,7 @@ import FastIcon from '@/assets/fast.png';
 import HeroSection from '@/components/hero';
 import BottomToTop from '@/components/animation/bottomToTop';
 import { useRouter } from 'next/navigation';
+import ComingSoonDialog from '@/components/coming-soon-dialog';
 
 export default function Home() {
   const router = useRouter();
@@ -28,6 +29,7 @@ export default function Home() {
       }}
       mt={{ xs: '40%', sm: '30%', md: '14%' }}
     >
+      <ComingSoonDialog />
       <HeroSection />
 
       <BottomToTop
