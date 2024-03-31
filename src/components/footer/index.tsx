@@ -72,7 +72,7 @@ const Footer = () => {
                 sx={{
                   aspectRatio: '1 / 1'
                 }}
-                onClick={() => window.open('https://discord.gg/fqQveduY')}
+                onClick={() => window.open('https://discord.gg/wADhWUgKth')}
               >
                 <Image src={DiscordIconWhite} alt='discord-icon' />
               </IconButton>
