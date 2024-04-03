@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <title>NibiDEX - The AMM for Nibiru Chain</title>
-      <Head>
+      <head>
         <meta property="og:url" content="https://nibidex.xyz/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="NibiDEX - The AMM for Nibiru Chain" />
@@ -30,7 +30,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="NibiDEX - The AMM for Nibiru Chain"/>
         <meta name="twitter:description" content="NibiDEX is a Uniswap inspired automated market-maker (AMM) protocol implemented on the Nibiru Ecosystem!"/>
         <meta name="twitter:image" content="https://i.postimg.cc/3xCLxh5r/nibidex-og.jpg"/>
-      </Head>
+      </head>
       <body className={inter.className}>
         <Providers>
           <Paper
