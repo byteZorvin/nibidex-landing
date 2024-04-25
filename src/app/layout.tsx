@@ -23,13 +23,13 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:title" content="NibiDEX - The AMM for Nibiru Chain" />
         <meta property="og:description" content="NibiDEX is a Uniswap inspired automated market-maker (AMM) protocol implemented on the Nibiru Ecosystem!" />
-        <meta property="og:image" content="https://i.postimg.cc/yY2XBXdW/meta-image.png" />
+        <meta property="og:image" content="https://i.postimg.cc/yY2XBXdW/meta-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="nibidex.xyz" />
         <meta property="twitter:url" content="https://nibidex.xyz/" />
         <meta name="twitter:title" content="NibiDEX - The AMM for Nibiru Chain" />
         <meta name="twitter:description" content="NibiDEX is a Uniswap inspired automated market-maker (AMM) protocol implemented on the Nibiru Ecosystem!" />
-        <meta name="twitter:image" content="https://i.postimg.cc/yY2XBXdW/meta-image.png" />
+        <meta name="twitter:image" content="https://i.postimg.cc/yY2XBXdW/meta-image.jpg" />
       </head>
       <body className={inter.className}>
         <Providers>
