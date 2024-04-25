@@ -5,10 +5,14 @@ import Image from 'next/image';
 import WheatIcon from '@/assets/wheat-icon.svg';
 
 import BottomToTop from '../animation/bottomToTop';
-import { comingSoonDialogContext } from '../providers';
+// import { comingSoonDialogContext } from '../providers';
 
 const HeroSection = () => {
-  const { setComingSoonDialogOpen } = useContext(comingSoonDialogContext);
+  // const { setComingSoonDialogOpen } = useContext(comingSoonDialogContext);
+
+  const handleClick = () => {
+    window.open('https://testnet.nibidex.xyz', '_blank');
+  };
 
   return (
     <Stack direction={'column'} alignItems={'center'} spacing={5}>
@@ -46,7 +50,7 @@ const HeroSection = () => {
             fontWeight: '600',
             fontSize: '16px'
           }}
-          onClick={() => setComingSoonDialogOpen(true)}
+          onClick={handleClick}
         >
           Launch App
         </Button>

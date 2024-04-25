@@ -16,7 +16,7 @@ import ToggleColorMode from './toggleColorMode';
 import NibiLogo from '@/assets/nibi-logo.png';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { comingSoonDialogContext } from '../providers';
+// import { comingSoonDialogContext } from '../providers';
 
 const logoStyle = {
   width: '50px',
@@ -26,7 +26,10 @@ const logoStyle = {
 
 function Navbar() {
   const router = useRouter();
-  const { setComingSoonDialogOpen } = React.useContext(comingSoonDialogContext);
+  // const { setComingSoonDialogOpen } = React.useContext(comingSoonDialogContext);
+  const handleClick = () => {
+    window.open('https://testnet.nibidex.xyz', '_blank');
+  };
 
   return (
     <AppBar
@@ -101,7 +104,7 @@ function Navbar() {
                 borderRadius: '15px',
                 padding: '5px 15px'
               }}
-              onClick={() => setComingSoonDialogOpen(true)}
+              onClick={handleClick}
             >
               Launch app
             </Button>
